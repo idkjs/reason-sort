@@ -1,0 +1,41 @@
+{
+  "name": "reason-sort",
+  "version": "0.1.3",
+  "browser": true,
+  "main": "lib/es6/src/Dominant.bs.js",
+  "scripts": {
+    "clean": "bsb -clean-world",
+    "build": "bsb -make-world",
+    "watch": "bsb -make-world -w",
+    "test": "npm run clean && npm run build && jest",
+    "dev-demo": "webpack serve"
+  },
+  "keywords": [
+    "Rescript",
+    "Reason",
+    "BubbleSort",
+    "InsertSort",
+    "SelectionSort",
+    "MergeSort",
+    "HeapSort",
+    "Swap",
+    "QuickSort",
+    "Sorting"
+  ],
+  "author": "Alain Armand",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/preset-env": "^7.14.2",
+    "@glennsl/bs-jest": "^0.7.0",
+    "bs-platform": "^9.0.2",
+    "html-webpack-plugin": "^5.3.1",
+    "webpack": "^5.37.1",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "jest": {
+    "testURL": "http://localhost/",
+    "testRegex": "Test.bs.js",
+    "transformIgnorePatterns": [ "/node_modules/(?!@glennsl/bs-jest|bs-platform).+\\.js$" ]
+  }
+}
